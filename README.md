@@ -4,6 +4,29 @@
 
 请在页面右边点击：**Clone or download -> Download Zip**
 
+## How to use:
+
+### Step1: 修改Texmaker命令：选项 -> 配置Texmaker -> 命令：
+LaTex: "C:/texlive/2018/bin/win32/latex.exe" -interaction=nonstopmode %.tex
+Dvipdfm: "C:/texlive/2018/bin/win32/pdflatex.exe" -interaction=nonstopmode %.tex
+XeLatex: "C:/texlive/2018/bin/win32/xelatex.exe" -interaction=nonstopmode %.tex
+Bib(la)tex: "C:/texlive/2018/bin/win32/bibtex.exe" %.aux
+
+### Step2: 如何编译：
+
+借用已有的论文模板，在模板基础上加入我们自己的文章内容，随后编译成PDF文件，其基本流程就是：XeLatex->Bibtex->XeLatex>XeLatex.
+
+1、第一步点击XeLatex编译，可以获得*.aux文件、*.dvi文件、*.log文件以及*.gz文件；
+
+2、第二步点击Bibtex编译，可以获得*.blg(性能监视器文件)和*.bbl文件；
+
+3、第三步再次点击XeLatex编译，获得新的*.aux文件、*.dvi文件、*.log文件以及*.gz文件；
+
+4、第四步再次点击XeLatex编译。
+
+至此，就可以顺利通过DVI Preview工具对编译好的文档进行查看了。
+
+
 ## 重要建议
 
 * 关于 LaTeX 的知识性问题，请查阅 [ucasthesis 知识小站](https://github.com/mohuangrui/ucasthesis/wiki) 和 [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)。
